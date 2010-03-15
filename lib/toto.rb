@@ -91,8 +91,17 @@ module Toto
     end
 
     def article route
-      Article.new("#{Paths[:articles]}/#{route.join('-')}.#{self[:ext]}", @config).load
+      begin
+        Article.new("#{Paths[:articles]}/#{route.join('-')}.#{self[:ext]}", @config).load
+      rescue
+        Site.articles(@config[:ext]).reverse.map do |a|
+          Article.new(a, @config)
+        end.first do |article|
+          article.title == route
+        end.load
+      end
     end
+
 
     def /
       self[:root]

@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["cloudhead"]
-  s.date = %q{2010-03-01}
+  s.date = %q{2010-03-15}
   s.description = %q{the tiniest blog-engine in Oz.}
   s.email = %q{self@cloudhead.net}
   s.extra_rdoc_files = [
@@ -48,9 +48,9 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.5}
   s.summary = %q{the tiniest blog-engine in Oz}
   s.test_files = [
-    "test/autotest.rb",
-     "test/test_helper.rb",
-     "test/toto_test.rb"
+    "test/test_helper.rb",
+     "test/toto_test.rb",
+     "test/autotest.rb"
   ]
 
   if s.respond_to? :specification_version then
